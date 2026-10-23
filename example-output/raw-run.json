@@ -1,0 +1,96 @@
+{
+  "utc": "2026-10-23T23:01:27.514942+00:00",
+  "status": "RENDERED_AND_FULLY_DECODED",
+  "elapsed_seconds": 14.26,
+  "width": 1280,
+  "height": 720,
+  "fps": "30/1",
+  "duration_seconds": 16.0,
+  "clip_count": 2,
+  "source_sha256": "bc3a057ed7c791d3842e605db38b2ba4576b853906c90adfef7dc2a5d337bc12",
+  "python_version": "3.13.16",
+  "input_clips": [
+    {
+      "file": "source-a-v2.mp4",
+      "sha256": "5450be0ce7f4a812cd252508a443b9953d987d22fe87d0519b0d189bdb7da89b",
+      "start": 2.0,
+      "duration": 8.0
+    },
+    {
+      "file": "source-b-v2.mp4",
+      "sha256": "dd6ae2cb138ebdf9b76f4096abb5a3b7b2c6c797bf663f453bbe72294da02a45",
+      "start": 1.0,
+      "duration": 8.0
+    }
+  ],
+  "music_sha256": "01309db10bb165e00b41560d75cd5b09262bb44c2d838b734ab76b3b93842f8d",
+  "normalized_voice_sha256": "2180bdea9e3983cc7db726027c53d3e4fdd65c5084ec4d431e5c5adf1eebe8ce",
+  "model_sha256": "921e4cf8686fdd993dcd081a5da5b6c365bfde1162e72b08d75ac75289920b1f",
+  "job_sha256": "a45332108f80d2e13438610fcec80ccb1cdda7cebc13d25fb963256e2eaa75f2",
+  "voice_sha256": "493dfadce10949f343fa74a9bf818a9c5a19d7e026438b44c9d8687ea369fdaa",
+  "video_sha256": "aa224c4c0af394aa4ca7e1dd9379d0a498e738237562731ae3d960e06a5992cf",
+  "raw_srt_sha256": "c59e29c7c0c6b82ffa48a984bb6b3171600520915af5ec70ff6de678d13e10b0",
+  "asr_cues": [
+    {
+      "start": 0.0,
+      "end": 3.5,
+      "text": "First, bring the clips next, add clear"
+    },
+    {
+      "start": 3.5,
+      "end": 6.65,
+      "text": "caption, finally export a consistent"
+    },
+    {
+      "start": 6.65,
+      "end": 7.0,
+      "text": "video."
+    },
+    {
+      "start": 7.0,
+      "end": 10.0,
+      "text": "This is a synthetic demonstration."
+    }
+  ],
+  "events": [
+    {
+      "stage": "normalize-0",
+      "seconds": 1.954,
+      "exit_code": 0
+    },
+    {
+      "stage": "normalize-1",
+      "seconds": 1.846,
+      "exit_code": 0
+    },
+    {
+      "stage": "join",
+      "seconds": 3.515,
+      "exit_code": 0
+    },
+    {
+      "stage": "voice",
+      "seconds": 0.149,
+      "exit_code": 0
+    },
+    {
+      "stage": "asr",
+      "seconds": 2.487,
+      "exit_code": 0
+    },
+    {
+      "stage": "export",
+      "seconds": 3.592,
+      "exit_code": 0
+    }
+  ],
+  "raw_asr_modified": false,
+  "burned_caption_source": "raw ASR",
+  "burned_caption_sha256": "c59e29c7c0c6b82ffa48a984bb6b3171600520915af5ec70ff6de678d13e10b0",
+  "caption_review_note": "No editorial correction",
+  "normalized_voice_sample_rate": 16000,
+  "full_decode_exit_code": 0,
+  "full_decode_error_bytes": 0,
+  "voice": "Synthetic Flite KAL in the supplied demo; not the account owner",
+  "limits": "One synthetic English Windows case, tiny.en CPU. No real-client, multilingual, CapCut or monthly-volume benchmark. Review captions before delivery."
+}

@@ -1,0 +1,8 @@
+{
+  "clips": [
+    {"path": "demo-inputs/source-a-v2.mp4", "start": 2, "duration": 8},
+    {"path": "demo-inputs/source-b-v2.mp4", "start": 1, "duration": 8}
+  ],
+  "narration": "demo-inputs/synthetic-voice.wav",
+  "music": "demo-inputs/generated-music.wav"
+}

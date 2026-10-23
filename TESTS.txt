@@ -1,0 +1,14 @@
+test_empty_asr_has_no_manual_fallback (test_video_flow.InputBoundaries.test_empty_asr_has_no_manual_fallback) ... ok
+test_existing_output_preserved_before_input_processing (test_video_flow.InputBoundaries.test_existing_output_preserved_before_input_processing) ... ok
+test_network_path_rejected_without_probe (test_video_flow.InputBoundaries.test_network_path_rejected_without_probe) ... ok
+test_nonfinite_or_boolean_time_rejected (test_video_flow.InputBoundaries.test_nonfinite_or_boolean_time_rejected) ... ok
+test_parent_escape_rejected (test_video_flow.InputBoundaries.test_parent_escape_rejected) ... ok
+test_subtitle_markup_rejected (test_video_flow.InputBoundaries.test_subtitle_markup_rejected) ... ok
+test_subtitle_must_fit_output (test_video_flow.InputBoundaries.test_subtitle_must_fit_output) ... ok
+test_trim_beyond_real_clip_rejected_before_render (test_video_flow.InputBoundaries.test_trim_beyond_real_clip_rejected_before_render) ... ok
+test_unc_and_absolute_rejected_before_resolution (test_video_flow.InputBoundaries.test_unc_and_absolute_rejected_before_resolution) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.790s
+
+OK

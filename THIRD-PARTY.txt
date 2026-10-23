@@ -1,0 +1,28 @@
+This package contains original Python code and synthetic example media.
+Third-party software/model binaries and font files are not included.
+
+FFmpeg: installed Windows build from gyan.dev, configured with GPL components.
+It is called as a separate executable. Obtain and license your own build.
+https://ffmpeg.org/legal.html
+https://ffmpeg.org/ffmpeg-filters.html#whisper
+https://ffmpeg.org/ffmpeg-filters.html#flite
+
+Speech synthesis: Flite KAL voice, Carnegie Mellon University / Alan W. Black,
+via the installed FFmpeg flite filter. The speech is explicitly synthetic.
+Flite and KAL use their respective permissive CMU/BSD-style notices; this is
+not a claim that every dependency is licensed under our code's MIT license.
+No endorsement by Carnegie Mellon or the voice authors is implied.
+https://github.com/festvox/flite/blob/master/COPYING
+https://github.com/festvox/flite/blob/master/lang/cmu_us_kal/cmu_us_kal.c
+
+ASR: whisper.cpp / OpenAI Whisper tiny.en, MIT-licensed model conversion.
+Only the separately obtained GGML file is loaded by the installed FFmpeg.
+https://github.com/ggml-org/whisper.cpp
+https://huggingface.co/ggerganov/whisper.cpp
+Model revision 5359861c739e955e79d9a303bcbc70fb988958b1.
+
+Typeface: installed Windows Arial was used to rasterize this demonstration.
+No Arial or other font binary is distributed. Users supply an installed font.
+
+Example music consists of newly generated 220/330/440 Hz sine waves; visuals
+are generated shapes and counters. Narration text is original for this demo.
