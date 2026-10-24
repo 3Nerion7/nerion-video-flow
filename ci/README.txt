@@ -48,8 +48,8 @@ repository. It requests read-only contents access and disables persisted
 checkout credentials. There are no secrets, scheduled jobs, paid/larger
 runners, uploaded artifacts or dependency caches. Results are printed to
 the job log and step summary. On failure, the last 80 lines of the fixed
-synthetic raw ASR stage log are printed for diagnosis. Each stage log and
-native-process exception retain its decimal and hexadecimal exit code;
+synthetic raw ASR stage log are printed for diagnosis. Each FFmpeg render-stage
+log and its nonzero-exit exception retain the decimal and hexadecimal exit code;
 this does not turn a failed render into a success. This is not a file
 upload facility for arbitrary inputs or client material.
 Public standard-runner compute is free under
