@@ -32,3 +32,10 @@ Code and review were prepared with AI assistance.
 The workflow runs new raw and reviewed renders with real local Whisper ASR,
 checks their provenance and decodes both outputs. A green run is evidence for
 the tested synthetic case; it does not establish accuracy on client footage.
+
+Current validation: 14 tests and both complete renders pass on the development
+Windows PC. On the standard hosted Windows runner, the same pinned FFmpeg build
+currently exits during ASR with `3221225477 (0xc0000005)`.
+[Observed hosted failure](https://github.com/3Nerion7/nerion-video-flow/actions/runs/40050614064).
+The cause remains unresolved; hosted rendering is not validated. The workflow
+keeps this failure visible instead of accepting a cached or manual transcript.
