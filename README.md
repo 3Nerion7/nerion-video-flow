@@ -25,3 +25,10 @@ synthetic case, with no production accuracy or monthly-volume claim.
 See [setup, reproduction and limitations](README.txt),
 [component attribution](THIRD-PARTY.txt), and [the code license](LICENSE.txt).
 Code and review were prepared with AI assistance.
+
+[Fresh Windows integration workflow](.github/workflows/demo.yml) ·
+[Dependency pins and local reproduction](ci/README.txt)
+
+The workflow runs new raw and reviewed renders with real local Whisper ASR,
+checks their provenance and decodes both outputs. A green run is evidence for
+the tested synthetic case; it does not establish accuracy on client footage.

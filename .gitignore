@@ -6,3 +6,5 @@ __pycache__/
 .test-*/
 models/
 new-reviewed-result/
+_ci-tools/
+_ci-results/

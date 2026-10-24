@@ -1,0 +1,10 @@
+{
+  "demo-job.json": "a45332108f80d2e13438610fcec80ccb1cdda7cebc13d25fb963256e2eaa75f2",
+  "demo-job-reviewed.json": "89b01b7d234b3db9a7053174630e5b3a762be26bf5ac5d6cfdc50cc4e912a78b",
+  "demo-inputs/source-a-v2.mp4": "5450be0ce7f4a812cd252508a443b9953d987d22fe87d0519b0d189bdb7da89b",
+  "demo-inputs/source-b-v2.mp4": "dd6ae2cb138ebdf9b76f4096abb5a3b7b2c6c797bf663f453bbe72294da02a45",
+  "demo-inputs/synthetic-voice.wav": "493dfadce10949f343fa74a9bf818a9c5a19d7e026438b44c9d8687ea369fdaa",
+  "demo-inputs/generated-music.wav": "01309db10bb165e00b41560d75cd5b09262bb44c2d838b734ab76b3b93842f8d",
+  "demo-inputs/reviewed-captions.srt": "52c6194da032de22116c54b896fb06c24ea5258dcb6ef5472689896a95007c9d",
+  "demo-inputs/narration-script.txt": "169685ef25d7e9b983bf200cce22dbeac988ba1e8eda6125b0bb766e30fecfa5"
+}

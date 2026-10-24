@@ -1,0 +1,35 @@
+name: Synthetic video integration
+on:
+  push:
+    branches: [main, codex/reproducible-demo-127]
+    paths:
+      - '**.py'
+      - 'ci/**'
+      - 'demo-inputs/**'
+      - 'demo-job*.json'
+      - '.github/workflows/demo.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-demo:
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - name: Check out the tested commit
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Python 3.13
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - name: Download and verify pinned public dependencies
+        run: python ci/bootstrap.py
+      - name: Add only the verified binaries to PATH
+        shell: pwsh
+        run: Add-Content -LiteralPath $env:GITHUB_PATH -Value (Join-Path $env:GITHUB_WORKSPACE '_ci-tools/bin')
+      - name: Boundary tests
+        run: python -m unittest -v test_video_flow.py ci/test_guards.py
+      - name: Fresh raw and reviewed renders with real CPU ASR
+        run: python ci/verify_demo.py --model _ci-tools/ggml-tiny.en.bin --font C:/Windows/Fonts/arial.ttf --out _ci-results
