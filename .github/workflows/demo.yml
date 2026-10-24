@@ -8,6 +8,7 @@ on:
       - 'demo-inputs/**'
       - 'demo-job*.json'
       - '.github/workflows/demo.yml'
+      - '.gitattributes'
   workflow_dispatch:
 permissions:
   contents: read
