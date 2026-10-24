@@ -34,3 +34,11 @@ jobs:
         run: python -m unittest -v test_video_flow.py ci/test_guards.py
       - name: Fresh raw and reviewed renders with real CPU ASR
         run: python ci/verify_demo.py --model _ci-tools/ggml-tiny.en.bin --font C:/Windows/Fonts/arial.ttf --out _ci-results
+      - name: ASR failure diagnostics for the fixed synthetic sample
+        if: failure()
+        shell: pwsh
+        run: |
+          $asrLog = Join-Path $env:GITHUB_WORKSPACE '_ci-results/raw/asr.log'
+          if (Test-Path -LiteralPath $asrLog) {
+            Get-Content -LiteralPath $asrLog -Tail 80
+          }
