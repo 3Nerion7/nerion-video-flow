@@ -1,0 +1,2 @@
+# Keep committed source and fixture bytes intact, regardless of core.autocrlf.
+* -text
