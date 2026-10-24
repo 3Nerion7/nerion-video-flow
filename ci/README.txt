@@ -2,7 +2,7 @@ Fresh Windows integration check
 ==============================
 
 The workflow tests the checked-out source, not example-output/*.mp4. It runs
-the nine renderer boundary tests and four integrity/preservation tests, then
+the nine renderer boundary tests and five integrity/preservation tests, then
 two fresh 16-second renders (raw captions and separately agent-reviewed
 captions). Both runs execute tiny.en on the CPU through FFmpeg's whisper
 filter, normalize the voice to 16 kHz mono, render, and decode the complete
@@ -48,7 +48,9 @@ repository. It requests read-only contents access and disables persisted
 checkout credentials. There are no secrets, scheduled jobs, paid/larger
 runners, uploaded artifacts or dependency caches. Results are printed to
 the job log and step summary. On failure, the last 80 lines of the fixed
-synthetic raw ASR stage log are printed for diagnosis. This is not a file
+synthetic raw ASR stage log are printed for diagnosis. Each stage log and
+native-process exception retain its decimal and hexadecimal exit code;
+this does not turn a failed render into a success. This is not a file
 upload facility for arbitrary inputs or client material.
 Public standard-runner compute is free under
 GitHub's published pricing; this workflow does not enable paid services.

@@ -145,9 +145,10 @@ def render(job_path: Path, model: Path, font: Path, out: Path) -> dict:
                 text=True, encoding='utf-8', errors='replace', timeout=240)
             event = {'stage': stage, 'seconds': round(time.perf_counter()-t, 3), 'exit_code': r.returncode}
             events.append(event)
-            (out/f'{stage}.log').write_text(r.stdout+r.stderr, encoding='utf-8')
+            native_code = f'{r.returncode} (0x{r.returncode & 0xffffffff:08x})'
+            (out/f'{stage}.log').write_text(f'Native process exit code: {native_code}\n'+r.stdout+r.stderr, encoding='utf-8')
             if r.returncode:
-                raise RuntimeError(f'{stage} failed; inspect its local log')
+                raise RuntimeError(f'{stage} failed with native exit code {native_code}; inspect its local log')
             if not expected.is_file() or not expected.stat().st_size:
                 raise RuntimeError(f'{stage} reported success without a new nonempty output')
         for i, (p, start, duration) in enumerate(clips):
